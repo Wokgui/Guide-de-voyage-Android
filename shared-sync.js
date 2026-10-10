@@ -1110,6 +1110,7 @@
     applyingRemote=true;
     try{
       SHARED_KEYS.forEach(key=>{
+        if(key==="programme"&&!Object.prototype.hasOwnProperty.call(restored,key)&&Array.isArray(previous.programme?.points))return;
         state[key]=Object.prototype.hasOwnProperty.call(restored,key)
           ?clone(restored[key])
           :defaultForKey(key);

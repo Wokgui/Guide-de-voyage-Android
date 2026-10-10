@@ -5,7 +5,7 @@
   const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im94ZHJod3ZldWN0cm9ycmt1dXJ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU2MjYzNDQsImV4cCI6MjEwMTIwMjM0NH0.lrdF-JILpgAwSrMLVjeU0fcKd2anOhp_T0qtEtJTVc0';
 
   function create(options) {
-    if(window.NativeShell) { options.release = {version:'guide-android-1.7'}; options.localExisted = window.NativeHadGuideData===true; options.prepareInitialSync = () => window.copenhagenSharedSync.prepareAccountRestore(); }
+    if(window.NativeShell) { options.release = {version:'guide-android-1.8'}; options.localExisted = window.NativeHadGuideData===true; options.prepareInitialSync = () => window.copenhagenSharedSync.prepareAccountRestore(); }
     if (!window.supabase?.createClient) return;
     const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY, {
       auth: { persistSession: true, detectSessionInUrl: true, autoRefreshToken: true }
